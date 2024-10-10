@@ -1,0 +1,124 @@
+@layer demo {
+    @keyframes scale-a-lil {
+      from {
+        scale: .5;
+      }
+    }
+    
+    @media (prefers-reduced-motion: no-preference) {
+      figure img {
+        animation: scale-a-lil linear both;
+        animation-timeline: view();
+        animation-range: 25vh 75vh;
+      }
+    }
+  }
+  
+  @layer demo.support {
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+  
+    html {
+      block-size: 100%;
+    }
+  
+    body {
+      min-block-size: 100%;
+      font-family: system-ui, sans-serif;
+      display: grid;
+      place-content: center;
+      place-items: center;
+      padding-block: 75vh;
+    }
+    
+    img {
+      max-inline-size: 100%;
+    }
+    
+    .grid {
+      display: grid;
+      gap: 5vmin;
+      padding: 5vmin;
+      place-items: center;
+      max-inline-size: 1024px;
+      
+      @media (width > 720px) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    figure {
+      display: grid;
+      place-items: center;
+      gap: 2rem;
+      padding: 2rem;
+      border-radius: 3rem;
+      background: aliceblue;
+      overflow: clip;
+      overflow-clip-margin: content-box;
+      
+      > picture {
+        padding: 2rem;
+        background: Canvas;
+      }
+      
+      & img {
+        max-block-size: 25vh;
+      }
+    }
+    
+    footer {
+      max-inline-size: 30ch;
+      text-align: center;
+      text-wrap: balance;
+    }
+  }
+
+  h1{
+    margin-bottom: 70px;
+  }
+
+#poto1{
+    width: 370px;
+    height: 55vh;
+}
+
+.moskov{
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    margin-bottom: 26px;
+    padding-bottom: 0;
+    font-size: 20px;
+    margin-top: 25px;
+    background-color: whitesmoke;
+    border: 2px solid transparent;
+    box-shadow: 20px;
+    padding-right: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+h2{
+    float: left;
+    box-sizing: border-box;
+    margin-right: 150px;
+}
+
+#m1{
+    margin-top: 0;
+    width: 350px;
+    margin-bottom: 10px;
+}
+
+#sempurna{
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+  margin-top: 43px;
+}
